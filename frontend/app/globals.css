@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-gray-100;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-surface rounded-lg p-4 shadow-lg border border-[#2d3548];
+  }
+
+  .bullish {
+    @apply text-bullish;
+  }
+
+  .bearish {
+    @apply text-bearish;
+  }
+
+  .neutral {
+    @apply text-neutral;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white px-4 py-2 rounded-lg font-medium hover:bg-primary-light transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-surface-light text-white px-4 py-2 rounded-lg font-medium hover:bg-surface-border transition-colors border border-surface-border;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-bullish {
+    @apply bg-bullish/20 text-bullish border border-bullish/30;
+  }
+
+  .badge-bearish {
+    @apply bg-bearish/20 text-bearish border border-bearish/30;
+  }
+
+  .badge-neutral {
+    @apply bg-neutral/20 text-neutral border border-neutral/30;
+  }
+
+  .tab-active {
+    @apply bg-primary text-white border-b-2 border-primary;
+  }
+
+  .tab-inactive {
+    @apply text-gray-400 hover:text-white hover:bg-surface-light border-b-2 border-transparent;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
